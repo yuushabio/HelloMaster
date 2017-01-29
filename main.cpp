@@ -9,6 +9,7 @@ int main()
     cout <<"can you lend me some money"<<endl;
     cout <<"How do feel?" << endl;
     cout<<"well,it worked"<<endl;
+    cout<< "tec store app is the best";
 
     return 0;
 }
