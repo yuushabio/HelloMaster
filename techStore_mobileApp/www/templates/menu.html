@@ -1,0 +1,71 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- TABS -->
+    <ion-tabs class='tabs-icon-top tabs-positive tabs-top'>
+
+      <ion-tab title="Home" icon-off="ion-home" icon-on="ion-home" href="#/app/home">
+        <ion-nav-view name="tab-home"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="My Ads" icon-off="ion-arrow-graph-up-right" icon-on="ion-arrow-graph-up-right" href="#/app/myAds">
+        <ion-nav-view name="tab-myAds"></ion-nav-view>
+      </ion-tab>
+	
+	  <!--
+      <ion-tab title="Playlist" icon-off="ion-ipod" icon-on="ion-ipod" href="#/app/playlists">
+        <ion-nav-view name="tab-playlists"></ion-nav-view>
+      </ion-tab>
+	 -->
+	  
+    </ion-tabs>
+
+  </ion-side-menu-content>
+
+   <!-- Side Menu (left) -->
+  <ion-side-menu side="left">
+    
+    <ion-content>
+      <ion-list>
+		<div class="item item-avatar" style="min-height:183px;">
+            <img src="img/side_menu_1.png" style="max-height:initial;max-width:initial;width:72% !important;margin-left:24px">
+
+          </div>
+		<div class="item item-divider">
+			Categories
+		 </div>
+		<ion-item class='item-icon-left' menu-close href='#/app/category/Accessories'>
+		  <i class='icon ion-android-folder-open'></i> Accessories
+        </ion-item>	
+		
+		<ion-item class='item-icon-left' menu-close href='#/app/category/Electronics'>
+		  <i class='icon ion-outlet'></i> Electronics
+        </ion-item>	
+		
+		<ion-item class='item-icon-left' menu-close href='#/app/category/Clothings'>
+		  <i class='icon ion-tshirt'></i> Clothings
+        </ion-item>	
+		<div class="item item-divider">
+			
+		</div>
+		<ion-item class='item-icon-left' menu-close ng-click="LogIn()" >
+		  <i class='icon ion-person'></i> Login
+        </ion-item>	
+		
+		<ion-item class='item-icon-left' menu-close ng-click="signup()">
+		  <i class='icon ion-person-add'></i> Sign Up
+        </ion-item>	
+		
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

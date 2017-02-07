@@ -1,0 +1,35 @@
+<ion-modal-view>
+  <ion-header-bar style='background-color:transparent;border-bottom:0px;'>
+    <h2 class="title" style="margin-left:4em;">Log in to your account</h2>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogIn()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="background">
+	  <h1 style="margin-left:3em;margin-top:0.6em;color:white">LOG IN</h1>
+	  <form ng-submit="doLogin()" style="height: 38.6em;">
+		<div class="list list-inset" style="background:transparent">
+		  <label class="item item-input input_field">
+			<input type="text" placeholder="Username">
+		  </label>
+		  
+		  <label class="item item-input input_field">
+			<input type="password" placeholder="Password">
+		  </label>
+		 
+		  <button class="button button-positive custom_btn">
+			LOG IN
+		  </button>
+		  
+		  <div style="margin-left:7px;margin-top:1em;text-align:center;color:white;font-size:1em;">
+			<div style="margin-top:2em;">
+			Don't have an account? <a ng-click="signup()">Sign up for free</a> 
+			</div>
+		  </div>
+		  
+		</div>	
+	  </form>
+	  
+  
+  </ion-content>
+</ion-modal-view>

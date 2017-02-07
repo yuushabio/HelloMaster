@@ -1,0 +1,17 @@
+<ion-view view-title="My Ads">
+   <ion-nav-buttons side="right">
+       <button id='focus-search' class="buttons button-icon ion-plus" style='font-size:30px;color:white;' ng-click="addAds()"></button>
+   </ion-nav-buttons>
+  <ion-content>
+    
+	<div class="list">
+		<a class="item item-text-wrap item-thumbnail-left" ng-repeat="product in products" href="#">
+		  <img src="{{product.image}}">
+		  <h2>{{product.product_name}}</h2>
+		  <p>{{product.description}}</p>
+		</a>
+	</div>
+	
+	
+  </ion-content>
+</ion-view>

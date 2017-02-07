@@ -1,0 +1,33 @@
+<ion-view view-title="Post Ad" class="padding">
+            <ion-content>
+                <button class="button button-full button-positive" ng-click="getImage()">
+                    Select image
+                </button>
+                <p ng-repeat="img in images">
+					<img ng-src="{{img}}" style="max-width:250px;max-height:250px" />
+				</p>
+				
+				<div class="list">
+				  
+				  <label class="item item-input">
+					<input type="text" placeholder="First Name">
+				  </label>
+				  <label class="item item-input item-select">
+					<div class="input-label">
+					  Location
+					</div>
+					<select>
+					  <option>Africa Hall</option>
+					  <option selected>Unity Hall</option>
+					  <option>University Hall</option>
+					  <option>Republic Hall</option>
+					  <option>Queens Hall</option>
+					  <option>Hall 7</option>
+					  <option>Brunei</option>
+					</select>
+				  </label>
+
+				</div>
+				
+            </ion-content>
+</ion-view>

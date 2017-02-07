@@ -1,0 +1,67 @@
+/* Empty. Add your own CSS if you like */
+/*changing all positive  color code to custom one*/
+.bar.bar-positive{
+   background-color:#dc4437 !important;
+   border-bottom-color: #dc4437 !important;
+}
+.bar-positive, .tabs-positive>.tabs{
+  background-color:#dc4437 !important;
+}
+
+.background{
+	background: url(../img/back_22.jpg);
+}
+
+/*custom a tag*/
+a{
+	text-decoration: none;
+    color: #dc4437;
+}
+
+
+
+/*Menu list- left side menu*/
+.menu_list .list{
+	height:47.5em !important;
+}
+
+
+/*styling for product displayed - home*/
+#price{
+	color:#dc4437;
+}
+#category{
+	color:#93949C;
+}
+#product_name{
+
+}
+
+/*Product container - home*/
+.product_item{
+	text-decoration: none;
+}
+
+/*Modified col-50 */
+.col-50 {
+    max-width: 45%;
+}
+
+/*Styling for input field*/
+.input_field{
+	margin-bottom: 1em;
+    border-radius: 20px !important;
+}
+
+/*Custom button styling*/
+.custom_btn{
+	margin-left: 81px;
+    border-radius: 31px;
+    margin-top: 1em;
+    width: 12em;
+}
+
+.button.button-positive{
+	background-color:#dc4437 !important;
+	border-color: #dc4437 !important;
+}

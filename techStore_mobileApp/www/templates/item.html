@@ -1,0 +1,25 @@
+<ion-view view-title="More Info">
+	
+	<div class="list card" style="margin-top:102px;" ng-repeat="product in products | filter:{id:item_id}">
+	
+	  <!-- ng-repeat="product in products | {id:item_id}" --->
+	  
+
+	  <div class="item item-body">
+		<img class="full-image" src="img/side_menu.png" style="margin-left:1em;width: 87% !important;">
+		<h4 id='product_name' style='font-size:1.5em;'>{{product.product_name}}</h4>
+		<p>
+		  {{product.description}}
+		</p>
+		<p>
+		  <span id='price' href="#" class="subdued"><i class='icon ion-pricetags'></i> {{product.price}}</span>
+		  <span id='category' style='padding-left:0.9em;' href="#" class="subdued"><i class='icon ion-android-list'></i> {{product.category}}</span>
+		  
+		   <span id='category' style='float:right;' href="#" class="subdued"><i class='icon ion-ios-location'></i> {{product.location}}</span>
+		</p>
+	  </div>
+
+	</div>
+	
+	
+</ion-view>
