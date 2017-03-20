@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tec Store|Home</title>
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="fonts/FontAwesome">
+</head>
+<body>
+<!--sample ad page here -->
+<!--search
+<div class="ui fluid category search">
+  <div class="ui icon input">
+    <input class="prompt" type="text" placeholder="Search for an ad...">
+    <i class="search icon"></i>
+  </div>
+  <div class="results"></div>
+</div>-->
+<!--button
+<div class="ui buttons">
+  <button class="ui button">Login</button>
+  <div class="or"></div>
+  <button class="ui positive button">Sign Up </button>
+</div>-->
+{% if all_items %}
+
+{% for item in all_items %}
+<!--show ads -->
+<div class="ui card">
+  <div class="ui slide masked reveal image">
+    <img src="img/iphone.png" class="visible content">
+   <!-- <img src="img/02145kwame.png" class="hidden content">-->
+  </div>
+  <div class="content">
+    <a class="header" href="/Userprofile/{{item.id }}">{{item.item_name}}</a>
+    <div class="meta">
+      <span class="date">{{item.price}}</span>
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="users icon"></i>
+     kumasi
+    </a>
+  </div>
+</div>
+{%endfor%}
+{% else %}
+<h2>Such data is not available</h2>
+{% endif %}
+</body>
+</html>
