@@ -1,0 +1,52 @@
+"""tecStore URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.10/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+"""
+#from django.conf.urls import url
+#from django.contrib import admin
+from django.conf.urls import url, include
+from django.conf.urls.static import static
+from django.conf import settings
+from django.contrib import admin
+from rest_framework import routers
+from Userprofile.views import (Itemviewset,
+                               UserLoginAPIView,
+                               accessCategoryviewset,
+                               electCategoryviewset,
+                               clothCategoryviewset,
+                               otherCategoryviewset)
+from Userprofile import views
+#from django.views.generic import View
+
+router=routers.DefaultRouter()
+router.register(r'item',Itemviewset)
+#router.register(r'shoes',shoeCategoryviewset)
+
+otherRouters=routers.SimpleRouter()
+otherRouters.register(r'accessories',accessCategoryviewset)
+otherRouters.register(r'electronics',electCategoryviewset)
+otherRouters.register(r'clothing',clothCategoryviewset)
+otherRouters.register(r'others',otherCategoryviewset)
+
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^api/', include(router.urls)),
+    url(r'^api/category/', include(otherRouters.urls)),
+    url(r'^tecstore/',include('Userprofile.urls')),
+   #register api
+    #url(r'^register/',views.UserCreateAPIView.as_view(),name='register'),
+    #login api
+    url(r'^login/',views.UserLoginAPIView.as_view(),name='login')
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
